@@ -1,5 +1,7 @@
 # User Configuration Manager
 
+[![CI](https://github.com/sklsp/User-Configuration-Manager/actions/workflows/ci.yml/badge.svg)](https://github.com/sklsp/User-Configuration-Manager/actions/workflows/ci.yml)
+
 A small Python project that manages user configuration settings (theme, notifications, volume and so on) through four plain functions operating on a dictionary. It demonstrates functions, dictionaries, input validation, CRUD operations, error handling and data management.
 
 Part of the FreeCodeCamp Scientific Computing with Python certification.
@@ -29,3 +31,12 @@ print(view_settings(settings))                          # Current User Settings:
 ```
 
 All four functions were verified against a copy of `test_settings`, including the duplicate-add and missing-key error paths.
+
+## Tests
+
+```bash
+pip install pytest
+python -m pytest -q
+```
+
+`tests/test_config_manager.py` covers every branch of the four functions (6 tests), and CI runs them on every push.
